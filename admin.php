@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$_SESSION['usuario']='Admin';
+$_SESSION['User']='Admin';
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@ $_SESSION['usuario']='Admin';
                 <a class="nav-link" href="#">Bloquear</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php $_SESSION['User'] ?></a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo($_SESSION['User']); ?></a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">Action</a>
                       <a class="dropdown-item" href="#">Another action</a>
@@ -35,7 +35,38 @@ $_SESSION['usuario']='Admin';
                   <a class="dropdown-item" href="#">Separated link</a>
                 </div>
             </li>
-            </ul>
+        </ul>
     </header>
+    <br>
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
 </body>
 </html>
