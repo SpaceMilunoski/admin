@@ -23,10 +23,43 @@ var oilData = {
         "Maestrías TICs",
         "Doctorado Biotecnología"
     ],
-    <?php $lterapiaFisica=133.3;?>
+    <?php
+    $lMedicoCirujano=50; 
+    $lTerapiaFisica=133.3;
+    $iBiomedica=50;
+    $iBiotecnologia=50;
+    $iFinanciera=50;
+    $iMecanicaAutomotriz=50;
+    $iMecatronica =50;
+    $iSoftware=50;
+    $iTelematica=50;
+    $eBiotecnologiaAmbiental=50;
+    $eMecatronica=50;
+    $eSeguridadInformatica=50;
+    $mBiotecnologia=50;
+    $mEnsenanzaCiencias=50;
+    $mMecatronica=50;
+    $mTics=50;
+    $dBiotecnologia=50;?>
     datasets: [
         {
-            data: [133.3, <?php echo($lterapiaFisica); ?>, 52.2, 51.2, 50.2,50,50,300,50,50,50,50,50,50,50,50,50],
+            data: [<?php echo($lMedicoCirujano); ?>,
+                <?php echo($lTerapiaFisica); ?>,
+                <?php echo($iBiomedica); ?>,
+                <?php echo($iBiotecnologia); ?>,
+                <?php echo($iFinanciera); ?>,
+                <?php echo($iMecanicaAutomotriz); ?>,
+                <?php echo($iMecanicaAutomotriz); ?>,
+                <?php echo($iSoftware); ?>,
+                <?php echo($iTelematica); ?>,
+                <?php echo($eBiotecnologiaAmbiental); ?>,
+                <?php echo($eMecatronica); ?>,
+                <?php echo($eSeguridadInformatica); ?>,
+                <?php echo($mBiotecnologia); ?>,
+                <?php echo($mEnsenanzaCiencias); ?>,
+                <?php echo($mMecatronica); ?>,
+                <?php echo($mTics); ?>,
+                <?php echo($dBiotecnologia); ?>],
             backgroundColor: [
                 "#716DF9",
                 "#4931A8",
