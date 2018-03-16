@@ -37,6 +37,12 @@ $_SESSION['User']='Admin';
             </li>
         </ul>
     </header>
+    
+
+<canvas id="oilChart" width="600" height="80" ></canvas>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+ <script  src="js/funciones.php"></script>
+
     <br>
     <table class="table">
   <thead class="thead-dark">
