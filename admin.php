@@ -17,6 +17,9 @@ $_SESSION['User']='Admin';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script  src="js/funciones.php"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
   </head>
 <body>
     <header>
@@ -42,8 +45,7 @@ $_SESSION['User']='Admin';
     </header>
     
 
-<canvas id="oilChart" width="600" height="80" ></canvas>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+<canvas id="oilChart" width="600" height="90" ></canvas>
  <script  src="js/funciones.php"></script>
 
     <br>
@@ -77,7 +79,7 @@ $_SESSION['User']='Admin';
     </tr>
   </tbody>
 </table>
-<div id="chart_div" style="width: 900px; height: 500px;"></div>
-
+<canvas  id="myChart" width="1000" height="300"></canvas>
+ <script  src="js/grafica2.php"></script>
 </body>
 </html>
