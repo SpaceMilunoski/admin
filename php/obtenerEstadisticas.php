@@ -93,186 +93,35 @@ class  Estadisticas extends Conexion{
     
        if($_SESSION['periodo']=='cuatrimestral'){
         if(isset($_SESSION['Mes'])){
-            if($_SESSION['Mes']=='01'){
+           // if($_SESSION['Mes']=='01'){
+             $mes=$_SESSION['Mes']+0;
+                $mes2 ="0".($_SESSION['Mes']+1);
+                $mes3 ="0".($_SESSION['Mes']+2);
+                $mes4="0".($_SESSION['Mes']+3);
+                if($mes>=7){
+                    $mes4 =$_SESSION['Mes']+3;
+                }
+                if($mes>=8){
+                    $mes3 =$_SESSION['Mes']+2;
+                }
+                if($mes>=9){
+                    $mes2 =$_SESSION['Mes']+1;
+                }
                 self::conectar();                   
                 $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
                 self::conectar();
                 $fila = mysqli_fetch_row($resultado);
                 self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '02');");
+                $resultado2 = self::$con->query("call library.estadisticas('2018', '".$mes2."');");
                 $fila2 = mysqli_fetch_row($resultado2);
                 self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '03');");
+                $resultado3 = self::$con->query("call library.estadisticas('2018', '".$mes3."');");
                 $fila3 = mysqli_fetch_row($resultado3);
                 self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '04');");
+                $resultado4 = self::$con->query("call library.estadisticas('2018', '".$mes4."');");
                 $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='02'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '03');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '04');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '05');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='03'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '04');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '05');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '06');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='04'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '05');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '06');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '07');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='05'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '06');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '07');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '08');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='06'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '07');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '08');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '09');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='07'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '08');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '09');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '10');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='08'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '09');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '10');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '11');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='09'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '10');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '11');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '12');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='10'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '11');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2018', '12');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2018', '01');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='11'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2018', '12');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2019', '01');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2019', '02');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
-            if($_SESSION['Mes']=='12'){
-                self::conectar();                   
-                $resultado = self::$con->query("call library.estadisticas('2018', '".$_SESSION['Mes']."');");
-                self::conectar();
-                $fila = mysqli_fetch_row($resultado);
-                self::conectar();
-                $resultado2 = self::$con->query("call library.estadisticas('2019', '01');");
-                $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
-                $resultado3 = self::$con->query("call library.estadisticas('2019', '02');");
-                $fila3 = mysqli_fetch_row($resultado3);
-                self::conectar();
-                $resultado4 = self::$con->query("call library.estadisticas('2019', '03');");
-                $fila4 = mysqli_fetch_row($resultado4);
-            }
+           // }
+            
             self::$lMedicoCirujano=[$fila[7],$fila2[7],$fila3[7],$fila4[7]];
             self::$lTerapiaFisica=[$fila[8],$fila2[8],$fila3[8],$fila4[8]];
             self::$iBiomedica=[$fila[0],$fila2[0],$fila3[0],$fila4[0]];
