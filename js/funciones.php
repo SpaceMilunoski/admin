@@ -1,4 +1,4 @@
-var oilCanvas = document.getElementById("oilChart");
+var oilCanvas = document.getElementById("visitasDia");
 
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
