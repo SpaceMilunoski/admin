@@ -128,15 +128,15 @@ var chart = new Chart(ctx, {
     // Configuration options go here
     options: {
         responsive: true,
-                title: {
-                    display: true,
-                   // text: 'Chart.js Line Chart'
-                },
-                tooltips: {
-                    position:'nearest',
-                    mode: 'index',
-                    intersect: false,
-                },               
+        title: {
+            display: true,
+            // text: 'Chart.js Line Chart'
+        },
+        tooltips: {
+            position:'nearest',
+            mode: 'index',
+            intersect: true,
+        },               
     }
 });
 <?php 
