@@ -27,7 +27,7 @@
                 <a class="nav-link active" href="#">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Bloquear</a>
+                <a class="nav-link" href="bloquear.php">Bloquear</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo($_SESSION['User']); ?></a>

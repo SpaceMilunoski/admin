@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+include('conexion2.php');
 class  Estadisticas extends Conexion{
     static public $lMedicoCirujano; 
     static public $lTerapiaFisica;
