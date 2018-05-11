@@ -46,6 +46,7 @@
  
  </script>
  </div>
+ <div id="datosGrafica">
 <form actio="admin.php" method="post">
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
@@ -73,6 +74,7 @@
   </div>
       <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
  <?php 
     class llenarTablas extends Estadisticas{
       public static $tablas;
