@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css">
     <script src="main.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -19,8 +19,9 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script> 
+    <script type="text/javascript" src="js/llenarselect.js"></script>
   </head>
-<body>
+<body onload="cargarAnios()">
     <header>
         <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -49,33 +50,24 @@
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2" for="inlineFormCustomSelect">Periodo</label>
-      <select class="custom-select mr-sm-2" id="reportes" name="reportes">
+      <select class="custom-select mr-sm-2" id="reportes" name="reportes" onclick="agregarMeses()">
         <option selected>Seleccione</option>
         <option value="mensual">Mensual</option>
         <option value="trimestral">Trimestral</option>
         <option value="cuatrimestral">Cuatrimestral</option>
         <option value="anual">Anual</option>
-      </select>
-    
-    
-
+      </select>        
     </div>
     <div class="col-auto my-1">
     <label class="mr-sm-2" for="inlineFormCustomSelect">Mes</label>
       <select class="custom-select mr-sm-2" id="Mes" name="Mes">
         <option selected>Seleccione</option>
-        <option value="01">Enero</option>
-        <option value="02">Febrero</option>
-        <option value="03">Marzo</option>
-        <option value="04">Abril</option>
-        <option value="05">Mayo</option>
-        <option value="06">Junio</option>
-        <option value="07">Julio</option>
-        <option value="08">Agosto</option>
-        <option value="09">Septirmbre</option>
-        <option value="10">Octubre</option>
-        <option value="11">Noviembre</option>
-        <option value="12">Diciembre</option>
+      </select>
+    </div>
+    <div class="col-auto my-1">
+    <label class="mr-sm-2" for="inlineFormCustomSelect">Año</label>
+      <select class="custom-select mr-sm-2" id="Anio" name="Anio">
+        <option selected>Seleccione</option>
       </select>
     </div>
   </div>
@@ -131,6 +123,7 @@
   </tbody>
 </table>
     </div>
+    <div id="contenedor">
 <br>
     <div id="especialidades">
       <table class="table">
@@ -159,6 +152,31 @@
   </tbody>
 </table>
     </div>
+<br>
+   <div id="admin">
+      <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">First</th>
+      <th scope="col">Fecha</th>    
+    </tr>
+  </thead>
+  <tbody>
+   <?php
+    echo llenarTablas::llenar();
+    while($row = mysqli_fetch_array(llenarTablas::$tablas)){
+    echo " <tr>
+      <th scope=".'"row"'.">".$row[0]."</th>
+      <td>".$row[8]."</td>
+      <td>".$row[20]."</td>
+    </tr>";
+  }
+    ?>
+  </tbody>
+</table>
+   </div>    
+ </div>
     <br>
     <div id="maestrias">
       <table class="table">
@@ -190,29 +208,6 @@
     ?>
 </table>
 </div>
-    <br>
-   <div id="admin">
-      <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">First</th>
-      <th scope="col">Fecha</th>    
-    </tr>
-  </thead>
-  <tbody>
-   <?php
-    echo llenarTablas::llenar();
-    while($row = mysqli_fetch_array(llenarTablas::$tablas)){
-    echo " <tr>
-      <th scope=".'"row"'.">".$row[0]."</th>
-      <td>".$row[8]."</td>
-      <td>".$row[20]."</td>
-    </tr>";
-  }
-    ?>
-  </tbody>
-</table>
-   </div>    
+    
 </body>
 </html>

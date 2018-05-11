@@ -1,8 +1,8 @@
 <?php
 	class Conexion{//iniciamos la clase con la que nos conectaremos a la bd
 		static public $con;//declaramos las variables
-		static private	$server="localhost";//"192.168.137.1";//direccion del servidor
-		static private $username="root";//"Daniel";//usuario
+		static private	$server="192.168.137.1";//"192.168.137.1";//direccion del servidor
+		static private $username="Daniel";//"Daniel";//usuario
 		static private $password="1234";//contraseña
 		static private $db='library';//base de datos
 		static public function conectar(){//esta funcion es la que conecta con la bd (abrimos la conexion)
