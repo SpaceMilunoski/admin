@@ -65,14 +65,18 @@
         <option selected>Seleccione</option>
       </select>
     </div>
-    <div class="col-auto my-1">
+    
+      <div class="col-auto my-1">
     <label class="mr-sm-2" for="inlineFormCustomSelect">Año</label>
       <select class="custom-select mr-sm-2" id="Anio" name="Anio">
         <option selected>Seleccione</option>
       </select>
     </div>
   </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+     <center>
+        <button type="submit" class="btn btn-primary">Submit</button>
+     </center>
+    
 </form>
 </div>
  <?php 

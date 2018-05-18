@@ -20,6 +20,9 @@ class  Estadisticas extends Conexion{
     static public $dBiotecnologia;
     static public $Administrativos;
     static public $tablas;
+    static public $iTelecomunicaciones;
+    static public $dCienciasaplicadas;
+    static public $Catedraticos;
     
     static function traerdatos(){
         if(isset($_SESSION['periodo'])){
@@ -44,7 +47,11 @@ class  Estadisticas extends Conexion{
             self::$mMecatronica=[$fila[11]];
             self::$mTics=[$fila[12]];
             self::$dBiotecnologia=[$fila[13]];
-            self::$Administrativos=[$fila[17]];       
+            self::$Administrativos=[$fila[17]];
+            self::$Catedraticos=[$fila[17]];
+            self::$dCienciasaplicadas=[$fila[17]];
+            self::$iTelecomunicaciones=[$fila[17]];
+
         }
         if($_SESSION['periodo']=='trimestral'){            
             if(isset($_SESSION['Mes'])){
@@ -88,6 +95,10 @@ class  Estadisticas extends Conexion{
                 self::$mTics=[$fila[12],$fila2[12],$fila3[12]];
                 self::$dBiotecnologia=[$fila[13],$fila2[13],$fila3[13]];
                 self::$Administrativos=[$fila[17],$fila2[17],$fila3[17]];
+                self::$Catedraticos=[$fila[17],$fila2[17],$fila3[17]];
+                self::$dCienciasaplicadas=[$fila[17],$fila2[17],$fila3[17]];
+                self::$iTelecomunicaciones=[$fila[17],$fila2[17],$fila3[17]];
+
             }
         }
     
@@ -140,6 +151,9 @@ class  Estadisticas extends Conexion{
             self::$mTics=[$fila[12],$fila2[12],$fila3[12],$fila4[12]];
             self::$dBiotecnologia=[$fila[13],$fila2[13],$fila3[13],$fila4[13]];
             self::$Administrativos=[$fila[17],$fila2[17],$fila3[17],$fila4[17]];
+            self::$Catedraticos=[$fila[17],$fila2[17],$fila3[17],$fila4[17]];
+            self::$dCienciasaplicadas=[$fila[17],$fila2[17],$fila3[17],$fila4[17]];
+            self::$iTelecomunicaciones=[$fila[17],$fila2[17],$fila3[17],$fila4[17]];
         }
         }
         if($_SESSION['periodo']=='anual'){
@@ -198,6 +212,9 @@ class  Estadisticas extends Conexion{
             self::$mTics=[$fila[12],$fila2[12],$fila3[12],$fila4[12],$fila5[12],$fila6[12],$fila7[12],$fila8[12],$fila9[12],$fila10[12],$fila11[12],$fila12[12]];
             self::$dBiotecnologia=[$fila[13],$fila2[13],$fila3[13],$fila4[13],$fila5[13],$fila6[13],$fila7[13],$fila8[13],$fila9[13],$fila10[13],$fila11[13],$fila12[13]];
             self::$Administrativos=[$fila[17],$fila2[17],$fila3[17],$fila4[17],$fila5[17],$fila6[17],$fila7[17],$fila8[17],$fila9[17],$fila10[17],$fila11[17],$fila12[17]];
+            self::$Catedraticos=[$fila[17],$fila2[17],$fila3[17],$fila4[17],$fila5[17],$fila6[17],$fila7[17],$fila8[17],$fila9[17],$fila10[17],$fila11[17],$fila12[17]];
+            self::$dCienciasaplicadas=[$fila[17],$fila2[17],$fila3[17],$fila4[17],$fila5[17],$fila6[17],$fila7[17],$fila8[17],$fila9[17],$fila10[17],$fila11[17],$fila12[17]];
+            self::$iTelecomunicaciones=[$fila[17],$fila2[17],$fila3[17],$fila4[17],$fila5[17],$fila6[17],$fila7[17],$fila8[17],$fila9[17],$fila10[17],$fila11[17],$fila12[17]];
         }
     }
     }

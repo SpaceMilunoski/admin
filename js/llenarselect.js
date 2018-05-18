@@ -4,14 +4,14 @@ var mes = document.getElementById("Mes");
 var reporte = document.getElementById("reportes");
  mes.innerHTML = '<option selected>Seleccione</option>';
 if (reporte.value=="anual") {
-   // mes.innerHTML = '<option selected>Seleccione</option>';
+    mes.innerHTML = '<option selected>Seleccione</option>';
    mes.disabled = true;
 }else{
     mes.disabled = false;
 }
 if (reporte.value=="mensual") {
     var cont = 1;
-   // mes.innerHTML = '<option selected>Seleccione</option>';
+    mes.innerHTML = '<option selected>Seleccione</option>';
     anio.forEach(function(element){
             var option = document.createElement("option");
         if (cont<=9) {
@@ -26,7 +26,7 @@ if (reporte.value=="mensual") {
 }
 if (reporte.value=="trimestral") {
 var cont = 1;
-    //mes.innerHTML = '<option selected>Seleccione</option>';
+    mes.innerHTML = '<option selected>Seleccione</option>';
     anio.forEach(function(element){
         
         if (cont<=10) {
@@ -44,7 +44,7 @@ var cont = 1;
 }
 if (reporte.value=="cuatrimestral") {
 var cont = 1;
-    //mes.innerHTML = '<option selected>Seleccione</option>';
+    mes.innerHTML = '<option selected>Seleccione</option>';
     anio.forEach(function(element){
         
         if (cont<=9) {
