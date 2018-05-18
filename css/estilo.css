@@ -41,8 +41,7 @@ table{
 	display: block;
 	height: 300px;
 }
-
-#contenedorGrafica{
+#datosGrafica{
 	position: relative;
-	z-index: 1000;
+	margin-left: 35%;
 }
