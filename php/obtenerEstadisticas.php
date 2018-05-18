@@ -49,8 +49,8 @@ class  Estadisticas extends Conexion{
             self::$dBiotecnologia=[$fila[13]];
             self::$Administrativos=[$fila[17]];
             self::$Catedraticos=[$fila[18]];
-            self::$dCienciasaplicadas=[$fila[19]];
-            self::$iTelecomunicaciones=[$fila[20]];
+            self::$iTelecomunicaciones=[$fila[19]];
+            self::$dCienciasaplicadas=[$fila[20]];
 
         }
         if($_SESSION['periodo']=='trimestral'){            
@@ -96,8 +96,8 @@ class  Estadisticas extends Conexion{
                 self::$dBiotecnologia=[$fila[13],$fila2[13],$fila3[13]];
                 self::$Administrativos=[$fila[17],$fila2[17],$fila3[17]];
                 self::$Catedraticos=[$fila[18],$fila2[18],$fila3[18]];
-                self::$dCienciasaplicadas=[$fila[19],$fila2[19],$fila3[19]];
-                self::$iTelecomunicaciones=[$fila[20],$fila2[20],$fila3[20]];
+                self::$iTelecomunicaciones=[$fila[19],$fila2[19],$fila3[19]];
+                self::$dCienciasaplicadas=[$fila[20],$fila2[20],$fila3[20]];
 
             }
         }
@@ -152,8 +152,8 @@ class  Estadisticas extends Conexion{
             self::$dBiotecnologia=[$fila[13],$fila2[13],$fila3[13],$fila4[13]];
             self::$Administrativos=[$fila[17],$fila2[17],$fila3[17],$fila4[17]];
             self::$Catedraticos=[$fila[18],$fila2[18],$fila3[18],$fila4[18]];
-            self::$dCienciasaplicadas=[$fila[19],$fila2[19],$fila3[19],$fila4[19]];
-            self::$iTelecomunicaciones=[$fila[20],$fila2[20],$fila3[20],$fila4[20]];
+            self::$iTelecomunicaciones=[$fila[19],$fila2[19],$fila3[19],$fila4[19]];
+            self::$dCienciasaplicadas=[$fila[20],$fila2[20],$fila3[20],$fila4[20]];
         }
         }
         if($_SESSION['periodo']=='anual'){
@@ -213,8 +213,8 @@ class  Estadisticas extends Conexion{
             self::$dBiotecnologia=[$fila[13],$fila2[13],$fila3[13],$fila4[13],$fila5[13],$fila6[13],$fila7[13],$fila8[13],$fila9[13],$fila10[13],$fila11[13],$fila12[13]];
             self::$Administrativos=[$fila[17],$fila2[17],$fila3[17],$fila4[17],$fila5[17],$fila6[17],$fila7[17],$fila8[17],$fila9[17],$fila10[17],$fila11[17],$fila12[17]];
             self::$Catedraticos=[$fila[18],$fila2[18],$fila3[18],$fila4[18],$fila5[18],$fila6[18],$fila7[18],$fila8[18],$fila9[18],$fila10[18],$fila11[18],$fila12[18]];
-            self::$dCienciasaplicadas=[$fila[19],$fila2[19],$fila3[19],$fila4[19],$fila5[19],$fila6[19],$fila7[19],$fila8[19],$fila9[19],$fila10[19],$fila11[19],$fila12[19]];
-            self::$iTelecomunicaciones=[$fila[20],$fila2[20],$fila3[20],$fila4[20],$fila5[20],$fila6[20],$fila7[20],$fila8[20],$fila9[20],$fila10[20],$fila11[20],$fila12[20]];
+            self::$iTelecomunicaciones=[$fila[19],$fila2[19],$fila3[19],$fila4[19],$fila5[19],$fila6[19],$fila7[19],$fila8[19],$fila9[19],$fila10[19],$fila11[19],$fila12[19]];
+            self::$dCienciasaplicadas=[$fila[20],$fila2[20],$fila3[20],$fila4[20],$fila5[20],$fila6[20],$fila7[20],$fila8[20],$fila9[20],$fila10[20],$fila11[20],$fila12[20]];
         }
     }
     }

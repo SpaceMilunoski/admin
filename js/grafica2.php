@@ -152,7 +152,7 @@ var chart = new Chart(ctx, {
         },
         tooltips: {
             position:'nearest',
-            mode: 'index',
+            mode: 'point',
             intersect: true,
         },               
     }
