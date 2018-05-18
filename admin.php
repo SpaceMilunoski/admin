@@ -40,13 +40,13 @@
             </li>
         </ul>       
     </header>
-    <div>
+    <div id="contenedorGrafica">
 <canvas  id="myChart" width="1000" height="300"></canvas>
  <script src="js/grafica2.php">
  
  </script>
  </div>
- <div id="datosGrafica">
+<div id="datosGrafica">
 <form actio="admin.php" method="post">
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
@@ -73,9 +73,9 @@
       </select>
     </div>
   </div>
-     <center>
+    
         <button type="submit" class="btn btn-primary">Submit</button>
-     </center>
+     
     
 </form>
 </div>

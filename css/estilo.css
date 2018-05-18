@@ -41,10 +41,8 @@ table{
 	display: block;
 	height: 300px;
 }
-#datosGrafica{
-	width: 40%;
-	margin-left: 10%;
-}
-#myChart{
-	z-index: 10000;
+
+#contenedorGrafica{
+	position: relative;
+	z-index: 1000;
 }
