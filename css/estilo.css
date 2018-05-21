@@ -41,7 +41,9 @@ table{
 	display: block;
 	height: 300px;
 }
+
 #datosGrafica{
 	position: relative;
-	margin-left: 35%;
+	width: 50%;
+	margin-left: 30%;
 }
