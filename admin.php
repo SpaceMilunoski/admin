@@ -104,6 +104,7 @@
       <th scope="col">Ingenierías Mecatrónica</th>
       <th scope="col">Ingenierías Software</th>
       <th scope="col">Ingenierías Telemática</th>
+      <th scope="col">Ingenierías Telecomunicaciones</th>
       <th scope="col">Fecha</th>           
     </tr>
   </thead>
@@ -113,8 +114,8 @@
     while($row = mysqli_fetch_array(llenarTablas::$tablas)){
     echo " <tr>
       <th scope=".'"row"'.">".$row[0]."</th>
-      <td>".$row[8]."</td>
       <td>".$row[9]."</td>
+      <td>".$row[10]."</td>
       <td>".$row[1]."</td>
       <td>".$row[2]."</td>
       <td>".$row[5]."</td>
@@ -122,7 +123,8 @@
       <td>".$row[7]."</td>
       <td>".$row[3]."</td>
       <td>".$row[4]."</td>
-      <td>".$row[20]."</td>
+      <td>".$row[8]."</td>
+      <td>".$row[24]."</td>
     </tr>";
   }
     ?>
@@ -148,10 +150,10 @@
     while($row = mysqli_fetch_array(llenarTablas::$tablas)){
     echo " <tr>
       <th scope=".'"row"'.">".$row[0]."</th>
-      <td>".$row[15]."</td>
-      <td>".$row[16]."</td>
       <td>".$row[17]."</td>
-      <td>".$row[20]."</td>
+      <td>".$row[18]."</td>
+      <td>".$row[19]."</td>
+      <td>".$row[24]."</td>
     </tr>";
   }
     ?>
@@ -164,7 +166,9 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">id</th>
-      <th scope="col">First</th>
+      <th scope="col">Administrativos</th>
+      <th scope="col">Academicos</th>
+      <th scope="col">Externos</th>
       <th scope="col">Fecha</th>    
     </tr>
   </thead>
@@ -174,8 +178,10 @@
     while($row = mysqli_fetch_array(llenarTablas::$tablas)){
     echo " <tr>
       <th scope=".'"row"'.">".$row[0]."</th>
-      <td>".$row[8]."</td>
       <td>".$row[20]."</td>
+      <td>".$row[21]."</td>
+      <td>".$row[22]."</td>
+      <td>".$row[24]."</td>
     </tr>";
   }
     ?>
@@ -203,12 +209,12 @@
     while($row = mysqli_fetch_array(llenarTablas::$tablas)){
     echo " <tr>
       <th scope=".'"row"'.">".$row[0]."</th>
-      <td>".$row[10]."</td>
       <td>".$row[11]."</td>
       <td>".$row[12]."</td>
       <td>".$row[13]."</td>
       <td>".$row[14]."</td>
-      <td>".$row[20]."</td>
+      <td>".$row[15]."</td>
+      <td>".$row[24]."</td>
     </tr>";
   }
     ?>
