@@ -23,6 +23,7 @@ class  Estadisticas extends Conexion{
     static public $iTelecomunicaciones;
     static public $dCienciasaplicadas;
     static public $Catedraticos;
+    static public $Externos;
     
     static function traerdatos(){
         if(isset($_SESSION['periodo'])){
@@ -51,6 +52,7 @@ class  Estadisticas extends Conexion{
             self::$Catedraticos=[$fila[18]];
             self::$iTelecomunicaciones=[$fila[19]];
             self::$dCienciasaplicadas=[$fila[20]];
+            self::$Externos=[$fila[21]];
 
         }
         if($_SESSION['periodo']=='trimestral'){            
@@ -98,7 +100,7 @@ class  Estadisticas extends Conexion{
                 self::$Catedraticos=[$fila[18],$fila2[18],$fila3[18]];
                 self::$iTelecomunicaciones=[$fila[19],$fila2[19],$fila3[19]];
                 self::$dCienciasaplicadas=[$fila[20],$fila2[20],$fila3[20]];
-
+                self::$Externos=[$fila[21],$fila2[21],$fila3[21]];
             }
         }
     
@@ -154,6 +156,7 @@ class  Estadisticas extends Conexion{
             self::$Catedraticos=[$fila[18],$fila2[18],$fila3[18],$fila4[18]];
             self::$iTelecomunicaciones=[$fila[19],$fila2[19],$fila3[19],$fila4[19]];
             self::$dCienciasaplicadas=[$fila[20],$fila2[20],$fila3[20],$fila4[20]];
+            self::$Externos=[$fila[21],$fila2[21],$fila3[21],$fila4[21]];
         }
         }
         if($_SESSION['periodo']=='anual'){
@@ -215,6 +218,7 @@ class  Estadisticas extends Conexion{
             self::$Catedraticos=[$fila[18],$fila2[18],$fila3[18],$fila4[18],$fila5[18],$fila6[18],$fila7[18],$fila8[18],$fila9[18],$fila10[18],$fila11[18],$fila12[18]];
             self::$iTelecomunicaciones=[$fila[19],$fila2[19],$fila3[19],$fila4[19],$fila5[19],$fila6[19],$fila7[19],$fila8[19],$fila9[19],$fila10[19],$fila11[19],$fila12[19]];
             self::$dCienciasaplicadas=[$fila[20],$fila2[20],$fila3[20],$fila4[20],$fila5[20],$fila6[20],$fila7[20],$fila8[20],$fila9[20],$fila10[20],$fila11[20],$fila12[20]];
+            self::$Externos=[$fila[21],$fila2[21],$fila3[21],$fila4[21],$fila5[21],$fila6[21],$fila7[21],$fila8[21],$fila9[21],$fila10[21],$fila11[21],$fila12[21]];
         }
     }
     }

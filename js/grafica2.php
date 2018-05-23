@@ -140,6 +140,12 @@ var chart = new Chart(ctx, {
             borderColor: "#770007",
             data: <?php   echo json_encode( Estadisticas::$Catedraticos); ?>,
             fill: false
+        },{
+            label: "Externos",
+            backgroundColor: "#775557",
+            borderColor: "#775557",
+            data: <?php   echo json_encode( Estadisticas::$Externos); ?>,
+            fill: false
         }]
     },
 
