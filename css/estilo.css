@@ -6,7 +6,7 @@
 }
 table{
 	font-size: 11px;
-	
+
 }
 #tbody{
 	overflow-y: auto;
@@ -30,6 +30,7 @@ table{
 #admin{
 	top: 0px;
 	float: left;
+	margin-left: 8%;
 	width: 30%;
 	height: 300px;
 	overflow: auto;

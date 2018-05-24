@@ -1,7 +1,7 @@
 <?php
 include('conexion2.php');
 class  Estadisticas extends Conexion{
-    static public $lMedicoCirujano; 
+    static public $lMedicoCirujano;
     static public $lTerapiaFisica;
     static public $iBiomedica;
     static public $iBiotecnologia;
@@ -24,13 +24,13 @@ class  Estadisticas extends Conexion{
     static public $dCienciasaplicadas;
     static public $Catedraticos;
     static public $Externos;
-    
+
     static function traerdatos(){
         if(isset($_SESSION['periodo'])){
         if($_SESSION['periodo']=='mensual'){
             self::conectar();
             $resultado = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '".$_SESSION['Mes']."');");
-            $fila = mysqli_fetch_row($resultado); 
+            $fila = mysqli_fetch_row($resultado);
             self::$lMedicoCirujano=[$fila[7]];
             self::$lTerapiaFisica=[$fila[8]];
             self::$iBiomedica=[$fila[0]];
@@ -55,7 +55,7 @@ class  Estadisticas extends Conexion{
             self::$Externos=[$fila[21]];
 
         }
-        if($_SESSION['periodo']=='trimestral'){            
+        if($_SESSION['periodo']=='trimestral'){
             if(isset($_SESSION['Mes'])){
                 //if($_SESSION['Mes']=='01'){
                 $mes=$_SESSION['Mes']+0;
@@ -67,18 +67,18 @@ class  Estadisticas extends Conexion{
                 if($mes>=9){
                     $mes2 =$_SESSION['Mes']+1;
                 }
-                    self::conectar();                   
+                    self::conectar();
                     $resultado = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '".$_SESSION['Mes']."');");
                     self::conectar();
                     $fila = mysqli_fetch_row($resultado);
                     self::conectar();
                     $resultado2 = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '".$mes2."');");
                     $fila2 = mysqli_fetch_row($resultado2);
-                    self::conectar();                    
+                    self::conectar();
                     $resultado3 = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '".$mes3."');");
                     $fila3 = mysqli_fetch_row($resultado3);
                 //}
-               
+
                 self::$lMedicoCirujano=[$fila[7],$fila2[7],$fila3[7]];
                 self::$lTerapiaFisica=[$fila[8],$fila2[8],$fila3[8]];
                 self::$iBiomedica=[$fila[0],$fila2[0],$fila3[0]];
@@ -103,7 +103,7 @@ class  Estadisticas extends Conexion{
                 self::$Externos=[$fila[21],$fila2[21],$fila3[21]];
             }
         }
-    
+
        if($_SESSION['periodo']=='cuatrimestral'){
         if(isset($_SESSION['Mes'])){
            // if($_SESSION['Mes']=='01'){
@@ -120,21 +120,21 @@ class  Estadisticas extends Conexion{
                 if($mes>=9){
                     $mes2 =$_SESSION['Mes']+1;
                 }
-                self::conectar();                   
+                self::conectar();
                 $resultado = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '".$_SESSION['Mes']."');");
                 self::conectar();
                 $fila = mysqli_fetch_row($resultado);
                 self::conectar();
                 $resultado2 = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '".$mes2."');");
                 $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
+                self::conectar();
                 $resultado3 = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '".$mes3."');");
                 $fila3 = mysqli_fetch_row($resultado3);
                 self::conectar();
                 $resultado4 = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '".$mes4."');");
                 $fila4 = mysqli_fetch_row($resultado4);
            // }
-            
+
             self::$lMedicoCirujano=[$fila[7],$fila2[7],$fila3[7],$fila4[7]];
             self::$lTerapiaFisica=[$fila[8],$fila2[8],$fila3[8],$fila4[8]];
             self::$iBiomedica=[$fila[0],$fila2[0],$fila3[0],$fila4[0]];
@@ -160,14 +160,14 @@ class  Estadisticas extends Conexion{
         }
         }
         if($_SESSION['periodo']=='anual'){
-            self::conectar();                   
+            self::conectar();
                 $resultado = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '01');");
                 self::conectar();
                 $fila = mysqli_fetch_row($resultado);
                 self::conectar();
                 $resultado2 = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '02');");
                 $fila2 = mysqli_fetch_row($resultado2);
-                self::conectar();                    
+                self::conectar();
                 $resultado3 = self::$con->query("call library.estadisticas('".$_SESSION['Anio']."', '03');");
                 $fila3 = mysqli_fetch_row($resultado3);
                 self::conectar();

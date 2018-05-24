@@ -20,8 +20,8 @@ sum(`doctorado_Biotecnologia`),
 sum(`especialidad_Biotecnologia`),
 sum(`especialidad_Mecatronica`),
 sum(`especialidad_Seguridad`),
-sum(`administrativos`) 
-from visits 
+sum(`administrativos`)
+from visits
 where date (`date_Day`) like concat(anio,'-',mes,'-','%');
 end ;;
 DELIMITER ;
