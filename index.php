@@ -19,6 +19,8 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+    <script src="js/pdf.js"></script>
     <script type="text/javascript" src="js/llenarselect.js"></script>
   </head>
   <body onload="cargarAnios()">
@@ -71,7 +73,8 @@
             </select>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Cargar datos</button>
+        <button class="btn btn-primary" onclick="savePDF();">Pdf</button>
       </form>
     </div>
   </body>

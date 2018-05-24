@@ -151,6 +151,15 @@ var chart = new Chart(ctx, {
 
     // Configuration options go here
     options: {
+    chart: {
+        backgroundColor: {
+            linearGradient: [0, 0, 500, 500],
+            stops: [
+                [0, 'rgb(255, 255, 255)'],
+                [1, 'rgb(240, 240, 255)']
+            ]
+        },
+    },
         responsive: true,
         title: {
             display: true,
@@ -163,6 +172,7 @@ var chart = new Chart(ctx, {
         },               
     }
 });
+chart.set
 <?php 
 
 ?>
