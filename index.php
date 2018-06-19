@@ -44,7 +44,7 @@
       </ul>
     </header>
     <div id="contenedorGrafica">
-      <canvas  id="myChart" width="1000" height="300"></canvas>
+      <canvas  id="myChart" width="900" height="400"></canvas>
       <script src="js/grafica2.php"></script>
     </div>
     <div id="datosGrafica">
